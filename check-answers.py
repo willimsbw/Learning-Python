@@ -9,6 +9,8 @@ def check_answers(quiz_answers,answer_key,passing_grade):
     count_correct = 0
     #check to make sure answer_key and quiz_answers are same length
     if len(quiz_answers) == len(answer_key):
+        #compare each quiz_answer to its corresponding answer_key value and add
+        #to count_correct for each matching answer
         for index in range(len(quiz_answers)):
             if quiz_answers[index] == answer_key[index]:
                 count_correct += 1
