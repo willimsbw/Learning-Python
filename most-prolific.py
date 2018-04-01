@@ -16,10 +16,11 @@ def most_prolific(albums):
     #for each element in our submitted dictionary, add its year to years with a
     #count of one. If the year is already in years, add 1 to the count instead
     for album in albums:
-        if albums[album] in years:
-            years[albums[album]] += 1
+        year = albums[album]
+        if year in years:
+            years[year] += 1
         else:
-            years[albums[album]] = 1
+            years[year] = 1
 
     #iterate through years to find highest count and set most_albums to that
     #count
