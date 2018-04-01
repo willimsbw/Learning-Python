@@ -17,9 +17,9 @@ def most_prolific(albums):
     #count of one. If the year is already in years, add 1 to the count instead
     for album in albums:
         if albums[album] in years:
-            years[album] += 1
+            years[albums[album]] += 1
         else:
-            years[album] = 1
+            years[albums[album]] = 1
 
     #iterate through years to find highest count and set most_albums to that
     #count
