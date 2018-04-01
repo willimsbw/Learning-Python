@@ -17,6 +17,16 @@ def create_news_ticker(headlines):
     for headline in headlines:
         if len(ticker) + len(headline)+1 > 140:
             #if headline and a space would put ticker over the line, truncate
-            #the headline add it, and break
+            #the headline, add it, and break
+            letters_to_keep = 140 - len(ticker)
+            truncated_headline = headline[:letters_to_keep]
+            ticker =+ truncated_headline
+            print("final ticker is: " + ticker)
+            break
         else:
             ticker += headline + " "
+            print("ticker is now: " + ticker)
+
+    return ticker
+
+create_news_ticker(headlines)
