@@ -16,6 +16,6 @@ def check_answers(quiz_answers,answer_key,passing_grade):
     #returns a pass or fail message, depending on whether you got enough correct
     #answers to meet the passing_grade
     if count_correct/len(quiz_answers) > passing_grade:
-        return "Congratulations, you passed the test! You scored " + str(count_correct) + " out of " + str(len(quiz_answers)) + ".")
+        return "Congratulations, you passed the test! You scored " + str(count_correct) + " out of " + str(len(quiz_answers)) + "."
     else:
-        return "Unfortunately, you did not pass. You scored " + str(count_correct) + " out of " + str(len(quiz_answers)) + ".")
+        return "Unfortunately, you did not pass. You scored " + str(count_correct) + " out of " + str(len(quiz_answers)) + "."
