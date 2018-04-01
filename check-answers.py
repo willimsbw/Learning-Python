@@ -1,36 +1,21 @@
-def check_answers(my_answers,answers):
+def check_answers(quiz_answers,answer_key,passing_grade):
     """
     Checks the five answers provided to a multiple choice quiz and returns the results.
+    quiz_answers: answers to check for correctness
+    answer_key: key of correct answers to check against quiz_answers
+    passing_grade: float. The percent of correct answers needed to pass in decimal form
     """
-    results= [None, None, None, None, None]
-    if my_answers[0] == answers[0]:
-        results[0] = True
-    elif my_answers[0] != answers[0]:
-        results[0] = False
-    if my_answers[1] == answers[1]:
-        results[1] = True
-    elif my_answers[1] != answers[1]:
-        results[1] = False
-    if my_answers[2] == answers[2]:
-        results[2] = True
-    elif my_answers[2] != answers[2]:
-        results[2] = False
-    if my_answers[3] == answers[3]:
-        results[3] = True
-    elif my_answers[3] != answers[3]:
-        results[3] = False
-    if my_answers[4] == answers[4]:
-        results[4] = True
-    elif my_answers[4] != answers[4]:
-        results[4] = False
+    #create variable to count correct answers
     count_correct = 0
-    count_incorrect = 0
-    for result in results:
-        if result == True:
-            count_correct += 1
-        if result != True:
-            count_incorrect += 1
-    if count_correct/5 > 0.7:
-        return "Congratulations, you passed the test! You scored " + str(count_correct) + " out of 5."
-    elif count_incorrect/5 >= 0.3:
-        return "Unfortunately, you did not pass. You scored " + str(count_correct) + " out of 5."
+    #check to make sure answer_key and quiz_answers are same length
+    if len(quiz_answers) == len(answer_key):
+        for index in range(len(quiz_answers)):
+            if quiz_answers[index] == answer_key[index]:
+                count_correct += 1
+
+    #returns a pass or fail message, depending on whether you got enough correct
+    #answers to meet the passing_grade
+    if count_correct/len(quiz_answers) > passing_grade:
+        return "Congratulations, you passed the test! You scored " + str(count_correct) + " out of " + str(len(quiz_answers)) + ".")
+    else:
+        return "Unfortunately, you did not pass. You scored " + str(count_correct) + " out of " + str(len(quiz_answers)) + ".")
