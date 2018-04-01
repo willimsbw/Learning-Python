@@ -20,7 +20,7 @@ def create_news_ticker(headlines):
             #the headline, add it, and break
             letters_to_keep = 140 - len(ticker)
             truncated_headline = headline[:letters_to_keep]
-            ticker =+ truncated_headline
+            ticker += truncated_headline
             print("final ticker is: " + ticker)
             break
         else:
