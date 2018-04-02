@@ -20,7 +20,7 @@ def create_cast_list(filename):
         for line in txt:
             #use regex to find the characters up to the first comma, then export
             #those characters as a string to cast_list
-            cast_list.append(regex.search(line))
+            cast_list.append(regex.search(line).group())
 
     return cast_list
 
