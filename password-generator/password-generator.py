@@ -1,25 +1,28 @@
 # Use an import statement at the top
-
-word_file = "words.txt"
+import random
+word_file = "C:/version-control/learning-python/password-generator/words.txt"
 word_list = []
 
 #fill up the word_list
 with open(word_file,'r') as words:
-	for line in words:
-		# remove white space and make everything lowercase
-		word = line.strip().lower()
-		# don't include words that are too long or too short
-		if 3 < len(word) < 8:
-			word_list.append(word)
+    for line in words:
+        # remove white space and make everything lowercase
+        word = line.strip().lower()
+        # don't include words that are too long or too short
+        if len(word) > 3 and len(word) < 8:
+            word_list.append(word)
 
 # Add your function generate_password here
 # It should return a string consisting of three random words
 # concatenated together without spaces
 def generate_password():
+    """Takes word_list and returns three random strings from it concatenated.
     """
-    Takes file words_file and passes three random words from it into word_list.
-    Returns word_list concatenated
-    """
+    password = ""
+    last_index = len(word_list)
+    for i in range(3):
+        password += word_list[random.randint(0, last_index)]
 
-# test your function
+    return password
+
 print(generate_password())
