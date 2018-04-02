@@ -19,9 +19,8 @@ def generate_password():
     """Takes word_list and returns three random strings from it concatenated.
     """
     password = ""
-    last_index = len(word_list)
     for i in range(3):
-        password += word_list[random.randint(0, last_index)]
+        password += random.choice(word_list)
 
     return password
 
