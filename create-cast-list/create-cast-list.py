@@ -15,7 +15,7 @@ def create_cast_list(filename):
     regex = re.compile("[^,]*") #matches all values up to first comma
 
     #open the file flying-circus-cast.txt
-    with open("c:/version-control/learning-python/create-cast-list/flying-circus-cast.txt") as txt:
+    with open(filename) as txt:
         #for each line in the file
         for line in txt:
             #use regex to find the characters up to the first comma, then export
@@ -23,3 +23,5 @@ def create_cast_list(filename):
             cast_list.append(regex.search(line))
 
     return cast_list
+
+print(create_cast_list("c:/version-control/learning-python/create-cast-list/flying-circus-cast.txt"))
