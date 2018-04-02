@@ -4,7 +4,7 @@ def hours2days(hours):
     and how many leftover hours. E.g., 26 hours = 1 day and 2 hours.
     """
 
-    days = int(hours/24)
+    days = hours//24
     hours_remaining = hours%24
 
     return (days, hours_remaining)
