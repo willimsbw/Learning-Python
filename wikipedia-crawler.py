@@ -79,3 +79,29 @@ while continue_crawl(article_chain, target_url):
     article_chain.append(first_link)
 
     time.sleep(2) #wait two second to run again to avoid DDosing wikipedia
+
+article_chain = [start_url]
+
+while continue_crawl(article_chain, target_url, 50):
+    print(article_chain[-1])
+    first_link = find_first_link(article_chain[-1])
+    if not first_link:
+        print("We've hit an article with no links!")
+        break
+
+    article_chain.append(first_link)
+
+    time.sleep(2) #wait two second to run again to avoid DDosing wikipedia
+
+article_chain = [start_url]
+
+while continue_crawl(article_chain, target_url, 10):
+    print(article_chain[-1])
+    first_link = find_first_link(article_chain[-1])
+    if not first_link:
+        print("We've hit an article with no links!")
+        break
+
+    article_chain.append(first_link)
+
+    time.sleep(2) #wait two second to run again to avoid DDosing wikipedia
