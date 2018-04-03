@@ -89,9 +89,4 @@ def crawl_wikipedia(start_url, target_url, max_pages=25):
 
         time.sleep(2) #wait two second to run again to avoid DDosing wikipedia
 
-crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 1)
-crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 3)
-crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 4)
-crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 10)
-crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 15)
 crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge")
