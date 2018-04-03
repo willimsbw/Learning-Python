@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import urllib
 
-def crawl_wikipedia(start_url, target_url, max_pages):
+def crawl_wikipedia(start_url, target_url, max_pages=25):
     """
     Clicks the first link on start_url, and the first link on the next page, etc
     until it either reaches target_url, gets stuck in a loop, or checks the predefined
@@ -52,7 +52,7 @@ def crawl_wikipedia(start_url, target_url, max_pages):
             first_link = urllib.parse.urljoin('https://en.wikipedia.org/', article_link)
             return first_link
 
-    def continue_crawl(search_history, target_url, max_searches=25):
+    def continue_crawl(search_history, target_url, max_searches):
         """
         Returns False if target_url is in search_history, search_history contains
         more than 25 values, or target_url doesn"t contain an anchor element
@@ -89,4 +89,9 @@ def crawl_wikipedia(start_url, target_url, max_pages):
 
         time.sleep(2) #wait two second to run again to avoid DDosing wikipedia
 
+crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 1)
+crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 3)
+crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 4)
+crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 10)
 crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge", 15)
+crawl_wikipedia("https://en.wikipedia.org/wiki/Special:Random", "https://en.wikipedia.org/wiki/Knowledge")
