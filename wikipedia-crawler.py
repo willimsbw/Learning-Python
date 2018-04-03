@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+from urllib.parse import urljoin
 
 def find_first_link(url):
     """
@@ -8,28 +9,35 @@ def find_first_link(url):
     """
     html = requests.get(url).text #html from target_url as string
     soup = BeautifulSoup(html, "html.parser") #soup object version of html for easy parsing
-    #The first div with class mw-parser-ouput that"s under the first div with mw-content-text
+
+    #if no link found, returns None. otherwise, will store the first link in the article
+    article_link = None
+
+    #variable that contains the article's body
     content_div = soup.find(id="mw-content-text").find(class_="mw-parser-output")
-    first_link = None #if no link found, we want to return None
-    a_href = None #initializing a_href
+
     #for each of the direct-child <p> elements in content_div
     for element in content_div.find_all("p", recursive=False):
         #for each of the direct-child <a> elements in a given <p> element in content_div
         for link in element.find_all("a", recursive=False):
-            a_href = link.get("href")
+            a_href = link.get("href") #the url of that <a> element
             if a_href.startswith("/wiki"):
                 if a_href.startswith("/wiki/Help"):
+                    #we don't want to link to help articles
                     continue
                 else:
-                    #make first_link the current element"s first <a>"s href
+                    #make first_link the current element"s first <a>"s href and
                     #stop looking
-                    first_link = a_href
+                    article_link = a_href
                     break
+
         #don't go to the next element, now that we have a first_link or have looked
         #at every link option
         break
 
-    #return the first link
+    #convert relative link from wikipedia to a full URL
+    first_link = urllib.parse.urljoin('https://en.wikipedia.org/', article_link)
+
     return first_link
 
 def continue_crawl(search_history, target_url, max_searches=25):
