@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-from urllib.parse import urljoin
+import urllib
 
 def find_first_link(url):
     """
