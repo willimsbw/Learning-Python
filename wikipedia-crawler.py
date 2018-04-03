@@ -11,12 +11,15 @@ def crawl_wikipedia(start_url, target_url, max_pages=25):
 
     start_url: string. The first wikipedia article you want the crawler to look at.
     target_url: string. The wikipedia article you want the crawler to try to reach.
-    max_pages: int. The maximum number of pages you want the crawler to look at
+    max_pages: int. The maximum number of pages you want the crawler to look at.
     """
 
     def find_first_link(url):
         """
-        Returns the first anchor element for a given url
+        For a given wikipedia article url, finds the first link to another wikipedia
+        article in that url. Returns None if there isn't oneself.
+
+        url: string. A url for a wikipedia article.
         """
         html = requests.get(url).text #html from target_url as string
         soup = BeautifulSoup(html, "html.parser") #soup object version of html for easy parsing
@@ -55,10 +58,12 @@ def crawl_wikipedia(start_url, target_url, max_pages=25):
     def continue_crawl(search_history, target_url, max_searches):
         """
         Returns False if target_url is in search_history, search_history contains
-        more than 25 values, or target_url doesn"t contain an anchor element
-        search_history: list. Pages already visited
-        target_url: string. The url we want to end up on
-        max_searches: int. The maximum number of times you want a loop to be able to run. Defaults to 25
+        more than max_searches values, or target_url doesn't contain an anchor element
+
+        search_history: list. Url's of pages already visited.
+        target_url: string. The url we want to end up on.
+        max_searches: int. The maximum number of times you want a loop to be
+        able to run. Defaults to 25.
         """
 
         #if more than 25 pages or user-specified number checked
@@ -78,13 +83,17 @@ def crawl_wikipedia(start_url, target_url, max_pages=25):
 
     article_chain = [start_url]
 
+    #loop until we meet a "false" condition of continue_crawl
     while continue_crawl(article_chain, target_url, max_pages):
+        #print the article we're looking at
         print(article_chain[-1])
+        #set first_link to the url of first link on the article we're looking at
         first_link = find_first_link(article_chain[-1])
         if not first_link:
             print("We've hit an article with no links!")
             break
 
+        #add first_link to article_chain so we can look at that article next
         article_chain.append(first_link)
 
         time.sleep(2) #wait two second to run again to avoid DDosing wikipedia
