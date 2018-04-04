@@ -1,22 +1,27 @@
 import turtle
 
-def drawSquare():
+def drawShapes():
     """
     Draws a single square
     """
-    #create a turtle named brad
+    #create two turtles and open a window to draw in
     brad = turtle.Turtle()
-    #open a window for brad to draw on
+    angie = turtle.Turtle()
     window = turtle.Screen()
+
     #color window background gray
     window.bgcolor("gray")
-    #color the turtle white
+
+    #color angie and her lines blue, and make her a square
+    angie.color("blue")
+    angie.pencolor("blue")
+    angie.shape("square")
+
+    #color brad, his lines, and the filling of his square white, and make
+    #him a circle
     brad.color("white")
-    #color the lines white
     brad.pencolor("white")
-    #color the filling of the square white
     brad.fillcolor("white")
-    #Make brad a circle
     brad.shape("circle")
 
     #tell it to fill the square that's created with our pre-determined color
@@ -32,7 +37,10 @@ def drawSquare():
     #Tells it that the shape is made so apply the filling
     brad.end_fill()
 
+    #have angie make a circle of diameter 100px
+    angie.circle(100)
+
     #tell our window to close when clicked on
     window.exitonclick()
 
-drawSquare()
+drawShapes()
