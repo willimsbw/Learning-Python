@@ -21,6 +21,7 @@ def removeNumerical(filePath):
         transTable = str.maketrans("1234567890", "          ", "1234567890")
         #new name is the file name with any numerical characters deleted
         newName = fileName.translate(transTable)
+        print("renaming " + fileName + " to " + newName)
         os.rename(fileName, newName)
 
     print("The files have had numbers removed from their names. Check '" + filePath + "' to see for yourself")
