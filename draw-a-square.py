@@ -2,43 +2,58 @@ import turtle
 
 def drawShapes():
     """
-    Draws a single square
+    Draws a square, a circle, and then a triangle.
     """
-    #create two turtles and open a window to draw in
-    brad = turtle.Turtle()
-    angie = turtle.Turtle()
+    #create three turtles and open a window to draw in
+    squareTurtle = turtle.Turtle()
+    circleTurtle = turtle.Turtle()
+    triangleTurtle = turtle.Turtle()
     window = turtle.Screen()
 
     #color window background gray
     window.bgcolor("gray")
 
-    #color angie and her lines blue, and make her a square
-    angie.color("blue")
-    angie.pencolor("blue")
-    angie.shape("square")
+    #color triangleTurtle and its lines orange, and make it a triangle
+    triangleTurtle.color("orange")
+    triangleTurtle.pencolor("orange")
+    triangleTurtle.shape("triangle")
 
-    #color brad, his lines, and the filling of his square white, and make
-    #him a circle
-    brad.color("white")
-    brad.pencolor("white")
-    brad.fillcolor("white")
-    brad.shape("circle")
+    #color circleTurtle and its lines blue, and make it a circle
+    circleTurtle.color("blue")
+    circleTurtle.pencolor("blue")
+    circleTurtle.shape("circle")
 
-    #tell it to fill the square that's created with our pre-determined color
-    brad.begin_fill()
+    #color squareTurtle, its lines, and the filling of its square white, and make
+    #it a square
+    squareTurtle.color("white")
+    squareTurtle.pencolor("white")
+    squareTurtle.fillcolor("white")
+    squareTurtle.shape("square")
 
-    #move forward, then turn right. Repeat 4 times
+    #tell python to fill following shapes drawn by squareTurtle
+    squareTurtle.begin_fill()
+
+    #have squareTurtle draw a square
     for i in range(4):
         #move forward 100 pixels
-        brad.forward(100)
+        squareTurtle.forward(100)
         #turn right 90 degrees
-        brad.right(90)
+        squareTurtle.right(90)
 
     #Tells it that the shape is made so apply the filling
-    brad.end_fill()
+    squareTurtle.end_fill()
 
-    #have angie make a circle of diameter 100px
-    angie.circle(100)
+    #have circleTurtle make a circle of diameter 100px
+    circleTurtle.circle(100)
+
+    #orient triangleTurtle away from other shapes
+    triangleTurtle.left(180)
+    #have triangleTurtle draw a triangle
+    for i in range(3):
+        #move forward 100 pixels
+        triangleTurtle.forward(150)
+        #turn left 120 degrees
+        triangleTurtle.left(120)
 
     #tell our window to close when clicked on
     window.exitonclick()
