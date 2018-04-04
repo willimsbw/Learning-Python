@@ -31,15 +31,22 @@ def drawShapes():
         squareTurtle.end_fill()
 
     def drawCircle():
+        """
+        Draws a blue unfilled circle with a blue circle cursor with radius 50px
+        """
         circleTurtle = turtle.Turtle()
         #color circleTurtle and its lines blue, and make it a circle
         circleTurtle.color("blue")
         circleTurtle.pencolor("blue")
         circleTurtle.shape("circle")
-        #have circleTurtle make a circle of diameter 100px
-        circleTurtle.circle(100)
+        #have circleTurtle make a circle of radius 50 pixels
+        circleTurtle.circle(50)
 
     def drawTriangle():
+        """
+        Draws an orange unfilled equilateral triangle with an orange triangle
+        cursor and sides 150px  
+        """
         #create three turtles and open a window to draw in
         triangleTurtle = turtle.Turtle()
         #color triangleTurtle and its lines orange, and make it a triangle
