@@ -8,8 +8,8 @@ def drawSquare():
     brad = turtle.Turtle()
     #open a window for brad to draw on
     window = turtle.Screen()
-    #color window background red
-    window.bgcolor("red")
+    #color window background gray
+    window.bgcolor("gray")
     #color the turtle white
     brad.color("white")
     #color the lines white
