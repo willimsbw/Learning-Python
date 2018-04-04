@@ -12,6 +12,9 @@ def removeNumerical(filePath):
     fileList = os.listdir(filePath)
     print("Original file names:")
     print(fileList)
+    #save original current working directory (cwd) then change cwd to filePath
+    originalDir = os.getcwd()
+    os.chdir(filePath)
     #for each file
     for fileName in fileList:
         #will delete  any numerical characters when used in str.translate()
@@ -22,5 +25,7 @@ def removeNumerical(filePath):
 
     print("renamed files:")
     print(fileList)
+    #put the current working directory back to where we found it
+    os.chdir(originalDir)
 
 removeNumerical(r"c:/version-control/Learning-Python/prank/prank-photos")
