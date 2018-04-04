@@ -23,8 +23,7 @@ def removeNumerical(filePath):
         newName = fileName.translate(transTable)
         os.rename(fileName, newName)
 
-    print("renamed files:")
-    print(fileList)
+    print("The files have had numbers removed from their names. Check '" + filePath + "' to see for yourself")
     #put the current working directory back to where we found it
     os.chdir(originalDir)
 
