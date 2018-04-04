@@ -45,7 +45,7 @@ def drawShapes():
     def drawTriangle():
         """
         Draws an orange unfilled equilateral triangle with an orange triangle
-        cursor and sides 150px  
+        cursor and sides 150px
         """
         #create three turtles and open a window to draw in
         triangleTurtle = turtle.Turtle()
@@ -63,8 +63,8 @@ def drawShapes():
             triangleTurtle.left(120)
 
     window = turtle.Screen()
-    #color window background gray
-    window.bgcolor("gray")
+    window.bgcolor("gray") #color window background gray
+
 
     drawSquare()
     drawCircle()
