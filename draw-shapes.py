@@ -1,15 +1,14 @@
 import turtle
 
-def drawShapes():
+def drawSun():
     """
     Draws a square, a circle, and then a triangle.
     """
 
-    def drawSquare():
+    def drawSquare(squareTurtle):
         """
         Draws a white, filled square 100 pixels long with a white square cursor
         """
-        squareTurtle = turtle.Turtle()
         #color squareTurtle, its lines, and the filling of its square white, and make
         #it a square
         squareTurtle.color("white")
@@ -30,11 +29,10 @@ def drawShapes():
         #Tells it that the shape is made so apply the filling
         squareTurtle.end_fill()
 
-    def drawCircle():
+    def drawCircle(circleTurtle):
         """
         Draws a blue unfilled circle with a blue circle cursor with radius 50px
         """
-        circleTurtle = turtle.Turtle()
         #color circleTurtle and its lines blue, and make it a circle
         circleTurtle.color("blue")
         circleTurtle.pencolor("blue")
@@ -42,13 +40,11 @@ def drawShapes():
         #have circleTurtle make a circle of radius 50 pixels
         circleTurtle.circle(50)
 
-    def drawTriangle():
+    def drawTriangle(triangleTurtle):
         """
         Draws an orange unfilled equilateral triangle with an orange triangle
         cursor and sides 150px
         """
-        #create three turtles and open a window to draw in
-        triangleTurtle = turtle.Turtle()
         #color triangleTurtle and its lines orange, and make it a triangle
         triangleTurtle.color("orange")
         triangleTurtle.pencolor("orange")
@@ -64,13 +60,15 @@ def drawShapes():
 
     window = turtle.Screen()
     window.bgcolor("gray") #color window background gray
+    brad = turtle.Turtle()
 
-
-    drawSquare()
-    drawCircle()
-    drawTriangle()
+    #draw 36 filled squares to make a sun
+    for i in range(36):
+        drawSquare(brad)
+        #turn right 10 degrees
+        brad.right(10)
 
     #tell our window to close when clicked on
     window.exitonclick()
 
-drawShapes()
+drawSun()
