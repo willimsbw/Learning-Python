@@ -80,4 +80,4 @@ def drawSomeKochs(iterations, sides, reverse=False):
 
     window.exitonclick()
 
-drawSomeKochs(7, 9)
+drawSomeKochs(14, 9)
