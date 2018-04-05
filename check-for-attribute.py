@@ -30,5 +30,5 @@ def checkSet(object, attribute, searchValue):
 brad = turtle.Turtle()
 
 checkSet(brad, "color", "black")
-checkset(brad, "gummy bears", True)
+checkSet(brad, "gummy bears", True)
 checkSet(brad, "gummy bears", False)
