@@ -13,18 +13,19 @@ def checkSet(object, attribute, searchValue):
     the attribute to if it doesn't exist
     """
 
-    getattrResult = getattr(object, attribute)
-    print(getattrResult)
+    try:
+        getattrResult = getattr(object, attribute)
+        print(getattrResult)
+    except AttributeError:
+        print("Object lacks this attribute. Adding, with value " + str(searchValue))
+        setattr(object, attribute, searchValue)
+        return
 
     if getattrResult == searchValue:
         print("You were right! the object has attribute " + attribute + " and its value is " + str(searchValue) + ".")
         return
-    elif getattrResult == "default":
-        print("Object lacks this attribute. Adding, with value " + str(searchValue))
-        setattr(object, attribute, searchValue)
-        return
     else:
-        print("Object has attribute " + attribute + " but it's value isn't " + str(searchValue) + ". It was " + str(getattrResult))
+        print("Object has attribute " + attribute + " but its value isn't " + str(searchValue) + ". It was " + str(getattrResult))
 
 brad = turtle.Turtle()
 
