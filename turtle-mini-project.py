@@ -41,7 +41,7 @@ def drawKochWhole(sideLength, n, someTurtle, numSides, reverse=False):
     angle = 360/numSides
 
     #fill the final shape with black
-    someTurtle.fillcolor("black")
+    someTurtle.fillcolor("white")
     someTurtle.begin_fill()
 
     for i in range(numSides):
@@ -67,17 +67,24 @@ def drawSomeKochs(iterations, sides, reverse=False):
     brad = turtle.Turtle(visible=False)
     window = turtle.Screen()
 
+    brad.pencolor("white")
+    #pick up brad's pen and move him left and up
+    brad.penup()
+    brad.setposition(-100, 250)
+    brad.pendown()
+
     for i in range(iterations):
         window.clearscreen() #erase the image
+        window.bgcolor("black")
         window.title("Let's draw some snowflakes!")
         #increase drawing surface size
         window.screensize(1000, 1000)
         #brad only shows every 100th update as he draws - speeds up even more
         window.tracer(100)
-        drawKochWhole(70, i, brad, sides, reverse)
+        drawKochWhole(200, i, brad, sides, reverse)
         window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
         time.sleep(1.5) #wait 1.5 seconds before next iteration
 
     window.exitonclick()
 
-drawSomeKochs(14, 9)
+drawSomeKochs(8, 9)
