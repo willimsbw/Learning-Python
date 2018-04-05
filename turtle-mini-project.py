@@ -68,9 +68,13 @@ def drawSomeKochs(iterations, sides, reverse=False):
     window = turtle.Screen()
 
     brad.pencolor("white")
-    #pick up brad's pen and move him left and up
+
+    #pick up brad's pen and move him left and up or right and down
     brad.penup()
-    brad.setposition(-100, 250)
+    if reverse:
+        brad.setposition(-100, -250)
+    else:
+        brad.setposition(-100, 250)
     brad.pendown()
 
     #opens window full-screen
@@ -89,4 +93,4 @@ def drawSomeKochs(iterations, sides, reverse=False):
 
     window.exitonclick()
 
-drawSomeKochs(8, 9)
+drawSomeKochs(8, 9, True)
