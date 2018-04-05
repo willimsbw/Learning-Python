@@ -81,6 +81,7 @@ def drawSomeKochs(iterations, sides, reverse=False):
         window.screensize(1000, 1000)
         #brad only shows every 100th update as he draws - speeds up even more
         window.tracer(100)
+        time.sleep(5)
         drawKochWhole(200, i, brad, sides, reverse)
         window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
         time.sleep(1.5) #wait 1.5 seconds before next iteration
