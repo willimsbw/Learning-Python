@@ -2,7 +2,7 @@ import turtle
 
 def checkSet(object, attribute, searchValue):
     """
-    Checks object for an attribute. If it has that attribute but the value,
+    Checks object for an attribute. If it has that attribute but the value
     in it is different from searchValue, returns the value the attribute is set
     to. If the value and searchValue match, returns a statement letting you know.
     If the object lacks the attribute, adds it with value searchValue.
