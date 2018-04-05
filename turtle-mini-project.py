@@ -73,8 +73,8 @@ def drawSomeKochs(iterations, sides, reverse=False):
     brad.setposition(-100, 250)
     brad.pendown()
 
+    #opens window full-screen
     window.setup(width = 1.0, height = 1.0)
-    time.sleep(5)
     for i in range(iterations):
         window.clearscreen() #erase the image
         window.bgcolor("black")
