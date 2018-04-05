@@ -56,7 +56,7 @@ def drawKochWhole(sideLength, n, someTurtle, numSides, reverse=False):
 brad = turtle.Turtle()
 window = turtle.Screen()
 #increase drawing surface size and make brad faster
-window.screenSize(5000, 5000)
+window.screensize(5000, 5000)
 brad.speed("fastest")
 
 drawKochSide(200, 3, brad)
