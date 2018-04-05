@@ -26,7 +26,7 @@ def checkSet(object, attribute, searchValue):
         print("You were right! the object has attribute " + attribute + " and its value is " + str(searchValue) + ".")
         return
     else:
-        print("Object has attribute " + attribute + " but its value isn't " + str(searchValue) + ". It was " + str(getattrResult))
+        print("Object has attribute " + attribute + " but its value isn't " + str(searchValue) + ". It's actually " + str(getattrResult))
 
 brad = turtle.Turtle()
 checkSet(brad, "color", "black")
