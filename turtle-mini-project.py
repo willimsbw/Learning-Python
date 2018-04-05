@@ -60,18 +60,15 @@ def drawSomeKochs():
     window.screensize(5000, 5000)
     brad.speed("fastest")
     #brad only shows every 100th update as he draws - speeds up even more
-    window.tracer(30)
+    window.tracer(100)
 
     drawKochSide(200, 3, brad)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
     time.sleep(5)
     window.resetscreen()
     drawKochWhole(300, 2, brad, 15)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
     time.sleep(5)
     window.resetscreen()
     drawKochWhole(1000, 5, brad, 10)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
 
     window.exitonclick()
 
