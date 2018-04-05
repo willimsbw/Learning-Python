@@ -59,6 +59,10 @@ window = turtle.Screen()
 drawKochSide(200, 3, brad)
 time.sleep(5)
 window.resetscreen()
-drawKochWhole(300, 2, brad, 4)
+drawKochWhole(300, 2, brad, 15)
+time.sleep(5)
+window.resetscreen()
+drawKochWhole(100, 5, brad, 10)
+
 
 window.exitonclick()
