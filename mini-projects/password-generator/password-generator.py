@@ -1,6 +1,6 @@
 # Use an import statement at the top
 import random
-word_file = "C:/version-control/learning-python/password-generator/words.txt"
+word_file = "C:/version-control/learning-python/mini-projects/password-generator/words.txt"
 word_list = []
 
 #fill up the word_list

@@ -28,4 +28,4 @@ def removeNumerical(filePath):
     #put the current working directory back to where we found it
     os.chdir(originalDir)
 
-removeNumerical(r"c:/version-control/Learning-Python/prank/prank-photos")
+removeNumerical(r"c:/version-control/Learning-Python/heavily-guided-exercises/prank/prank-photos")
