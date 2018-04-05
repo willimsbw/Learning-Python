@@ -74,7 +74,7 @@ def drawSomeKochs():
     window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
     time.sleep(2)
     window.resetscreen()
-    drawKochWhole(100, 13, brad, 30, True)
+    drawKochWhole(400, 13, brad, 30, True)
 
     window.exitonclick()
 
