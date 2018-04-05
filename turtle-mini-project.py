@@ -57,7 +57,7 @@ def drawSomeKochs():
     brad = turtle.Turtle()
     window = turtle.Screen()
     #increase drawing surface size and make brad faster
-    window.screensize(5000, 5000)
+    window.screensize(10000, 10000)
     brad.speed("fastest")
     #brad only shows every 100th update as he draws - speeds up even more
     window.tracer(100)
@@ -66,15 +66,20 @@ def drawSomeKochs():
     window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
     time.sleep(2)
     window.resetscreen()
-    drawKochWhole(300, 2, brad, 15)
+    drawKochWhole(100, 2, brad, 15)
     window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
     time.sleep(2)
     window.resetscreen()
-    drawKochWhole(1000, 5, brad, 10)
+    drawKochWhole(100, 5, brad, 10)
     window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
     time.sleep(2)
     window.resetscreen()
-    drawKochWhole(400, 13, brad, 30, True)
+    drawKochWhole(70, 7, brad, 30, True)
+    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
+    time.sleep(2)
+    window.resetscreen()
+    drawKochWhole(70, 7, brad, 30)
+    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
 
     window.exitonclick()
 
