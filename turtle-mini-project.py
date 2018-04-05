@@ -53,34 +53,31 @@ def drawKochWhole(sideLength, n, someTurtle, numSides, reverse=False):
 
     someTurtle.end_fill()
 
-def drawSomeKochs():
-    brad = turtle.Turtle()
-    window = turtle.Screen()
-    #increase drawing surface size and make brad faster
-    window.screensize(10000, 10000)
-    brad.speed("fastest")
-    #brad only shows every 100th update as he draws - speeds up even more
-    window.tracer(100)
+def drawSomeKochs(iterations, sides, reverse=False):
+    """
+    Draws x number of koch snowflakes with y number of sides, in reverse or not
 
-    drawKochSide(200, 3, brad)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
-    time.sleep(2)
-    window.resetscreen()
-    drawKochWhole(100, 2, brad, 15)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
-    time.sleep(2)
-    window.resetscreen()
-    drawKochWhole(100, 5, brad, 10)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
-    time.sleep(2)
-    window.resetscreen()
-    drawKochWhole(70, 7, brad, 30, True)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
-    time.sleep(2)
-    window.resetscreen()
-    drawKochWhole(70, 7, brad, 30)
-    window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
+    iteration: int. The number of times you want it to draw a koch snowflake.
+    Starts with n=1 and increases n by 1 with each iteration.
+    sides: int. The number of sides you want your snowflakes to have.
+    reverse: bool. Whether or not you want the edges to face out or in on the
+    snowflake. Defaut value is false.
+    window: object. A turtle.screen() object.
+    """
+    brad = turtle.Turtle(visible=False)
+    window = turtle.Screen()
+
+    for i in range(iterations):
+        window.clearscreen() #erase the image
+        window.title("Let's draw some snowflakes!")
+        #increase drawing surface size
+        window.screensize(1000, 1000)
+        #brad only shows every 100th update as he draws - speeds up even more
+        window.tracer(100)
+        drawKochWhole(70, i, brad, sides, reverse)
+        window.update() #updates any of the drawing our tracer missed (the last <100 lines drawn)
+        time.sleep(1.5) #wait 1.5 seconds before next iteration
 
     window.exitonclick()
 
-drawSomeKochs()
+drawSomeKochs(7, 9)
