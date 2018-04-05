@@ -16,7 +16,6 @@ def checkSet(object, attribute, searchValue):
     #if it gets an AttributeError because the attribute doesn't exist, adds the attribute to the object
     try:
         getattrResult = getattr(object, attribute)
-        print(getattrResult)
     except AttributeError:
         print("Object lacks this attribute. Adding, with value " + str(searchValue))
         setattr(object, attribute, searchValue)
@@ -29,6 +28,7 @@ def checkSet(object, attribute, searchValue):
         print("Object has attribute " + attribute + " but its value isn't " + str(searchValue) + ". It's actually " + str(getattrResult))
 
 brad = turtle.Turtle()
+
 checkSet(brad, "color", "black")
-checkSet(brad, "gummy bears", True)
+checkset(brad, "gummy bears", True)
 checkSet(brad, "gummy bears", False)
