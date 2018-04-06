@@ -21,7 +21,7 @@ avatar = movies.Movie("Avatar",
 lady_bird = movies.Movie("Lady Bird",
                         "A teenager (Saoirse Ronan) navigates a loving but turbulent relationship with her strong-willed mother (Laurie Metcalf) over the course of an eventful and poignant senior year of high school.",
                         "https://www.youtube.com/watch?v=cNi_HC839Wo",
-                        "https://cdn.tuftsdaily.com/2017/11/MV5BMjg1NDY0NDYzMV5BMl5BanBnXkFtZTgwNzIwMTEwNDI@._V1_SY1000_CR006761000_AL_-938x535.jpg")
+                        "https://images-na.ssl-images-amazon.com/images/I/A1sU+Yf+V9L._RI_.jpg")
 
 school_of_rock = movies.Movie("School of Rock",
                             "Overly enthusiastic guitarist Dewey Finn (Jack Black) gets thrown out of his bar band and finds himself in desperate need of work. Posing as a substitute music teacher at an elite private elementary school, he exposes his students to the hard rock gods he idolizes and emulates -- much to the consternation of the uptight principal (Joan Cusack). As he gets his privileged and precocious charges in touch with their inner rock 'n' roll animals, he imagines redemption at a local Battle of the Bands.",
