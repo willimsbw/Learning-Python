@@ -19,5 +19,5 @@ avatar = movies.Movie("Avatar",
 
 print_all_movie_attributes(toy_story)
 print_all_movie_attributes(avatar)
-toy_story.show_trailer
-avatar.show_trailer
+toy_story.show_trailer()
+avatar.show_trailer()
