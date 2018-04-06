@@ -6,3 +6,10 @@ print(toy_story.plot_summary)
 print(toy_story.trailer_url)
 print(toy_story.poster_image_url)
 print(toy_story.title)
+
+avatar = movies.Movie("blue alien native americans get dances with wolves'd by white people", "https://www.youtube.com/watch?v=5PSNL1qE6VY", "https://www.movieposter.com/posters/archive/main/98/MPW-49246", "Avatar")
+
+print(avatar.plot_summary)
+print(avatar.trailer_url)
+print(avatar.poster_image_url)
+print(avatar.title)
