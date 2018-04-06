@@ -8,25 +8,10 @@ def print_all_movie_attributes(object):
     "\nposwer image url: " + object.poster_image_url)
 
 
-toy_story = movies.Movie("Toy Story",
-                        "toys are alive!",
-                        "https://www.youtube.com/watch?v=KYz2wyBy3kc",
-                        "https://vignette.wikia.nocookie.net/pixar/images/4/4c/Toy-story-movie-posters-4.jpg/revision/latest?cb=20160329080002")
-
-avatar = movies.Movie("Avatar",
-                    "blue alien native americans get dances with wolves'd by white people",
-                    "https://www.youtube.com/watch?v=5PSNL1qE6VY",
-                    "https://www.movieposter.com/posters/archive/main/98/MPW-49246")
-
 lady_bird = movies.Movie("Lady Bird",
                         "A teenager (Saoirse Ronan) navigates a loving but turbulent relationship with her strong-willed mother (Laurie Metcalf) over the course of an eventful and poignant senior year of high school.",
                         "https://www.youtube.com/watch?v=cNi_HC839Wo",
                         "https://images-na.ssl-images-amazon.com/images/I/A1sU+Yf+V9L._RI_.jpg")
-
-school_of_rock = movies.Movie("School of Rock",
-                            "Overly enthusiastic guitarist Dewey Finn (Jack Black) gets thrown out of his bar band and finds himself in desperate need of work. Posing as a substitute music teacher at an elite private elementary school, he exposes his students to the hard rock gods he idolizes and emulates -- much to the consternation of the uptight principal (Joan Cusack). As he gets his privileged and precocious charges in touch with their inner rock 'n' roll animals, he imagines redemption at a local Battle of the Bands.",
-                            "https://www.youtube.com/watch?v=3PsUJFEBC74",
-                            "http://t2.gstatic.com/images?q=tbn:ANd9GcRMRyrfvOfl7RStLTmLNBIf86oc677YSkxdw1XeNHV928aAdL_3")
 
 coco = movies.Movie("Coco",
                     "Despite his family's generations-old ban on music, young Miguel dreams of becoming an accomplished musician like his idol Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead. After meeting a charming trickster named Héctor, the two new friends embark on an extraordinary journey to unlock the real story behind Miguel's family history.",
@@ -38,7 +23,17 @@ midnight_in_paris = movies.Movie("Midnight in Paris",
                                 "https://www.youtube.com/watch?v=BYRWfS2s2v4",
                                 "https://www.movieposter.com/posters/archive/main/145/MPW-72510")
 
-movie_list = [toy_story, avatar, lady_bird, school_of_rock, coco, midnight_in_paris]
+shape_of_water = movies.Movie("The Shape of Water",
+                            "Elisa is a mute, isolated woman who works as a cleaning lady in a hidden, high-security government laboratory in 1962 Baltimore. Her life changes forever when she discovers the lab's classified secret -- a mysterious, scaled creature from South America that lives in a water tank. As Elisa develops a unique bond with her new friend, she soon learns that its fate and very survival lies in the hands of a hostile government agent and a marine biologist.",
+                            "https://www.youtube.com/watch?v=XFYWazblaUA",
+                            "https://www.movieposter.com/posters/archive/main/242/MPW-121262")
+
+moonrise_kingdom = movies.Movie("Moonrise Kingdom",
+                                "The year is 1965, and the residents of New Penzance, an island off the coast of New England, inhabit a community that seems untouched by some of the bad things going on in the rest of the world. Twelve-year-olds Sam (Jared Gilman) and Suzy (Kara Hayward) have fallen in love and decide to run away. But a violent storm is approaching the island, forcing a group of quirky adults (Bruce Willis, Edward Norton, Bill Murray) to mobilize a search party and find the youths before calamity strikes.",
+                                "https://www.youtube.com/watch?v=7N8wkVA4_8s",
+                                "http://img.moviepostershop.com/moonrise-kingdom-movie-poster-2012-1020750674.jpg")
+
+movie_list = [lady_bird, coco, midnight_in_paris, shape_of_water, moonrise_kingdom]
 
 #for film in movie_list:
 #    print_all_movie_attributes(film)
