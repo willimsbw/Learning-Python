@@ -37,7 +37,7 @@ def censorProfanity(str):
         #return str with each curse word censored.
         return regex.sub(censor, str)
     else:
-        return "No profanity found here!"
+        print("No profanity found here!")
 
 text = readText("C:/version-control/learning-python/mini-projects/profanity-checker/movie_quotes.txt")
 censoredText = censorProfanity(text)
