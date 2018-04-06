@@ -39,6 +39,6 @@ midnight_in_paris = movies.Movie("Midnight in Paris",
 
 movie_list = [toy_story, avatar, lady_bird, school_of_rock, coco, midnight_in_paris]
 
-for film in movie_list:
-    print_all_movie_attributes(film)
-    film.show_trailer()
+#for film in movie_list:
+#    print_all_movie_attributes(film)
+#    film.show_trailer()
