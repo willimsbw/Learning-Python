@@ -5,7 +5,9 @@ def print_all_movie_attributes(object):
     print("title: " + object.title +
     "\nplot summary: " + object.storyline +
     "\ntrailer url: " + object.trailer_youtube_url +
-    "\nposwer image url: " + object.poster_image_url)
+    "\nposter image url: " + object.poster_image_url +
+    "\nvalid ratings: ")
+    print(object.valid_ratings)
 
 
 lady_bird = movies.Movie("Lady Bird",
@@ -35,8 +37,8 @@ moonrise_kingdom = movies.Movie("Moonrise Kingdom",
 
 movie_list = [lady_bird, coco, midnight_in_paris, shape_of_water, moonrise_kingdom]
 
-#for film in movie_list:
-#    print_all_movie_attributes(film)
+for film in movie_list:
+    print_all_movie_attributes(film)
 #    film.show_trailer()
 
-fresh_tomatoes.open_movies_page(movie_list)
+#fresh_tomatoes.open_movies_page(movie_list)
