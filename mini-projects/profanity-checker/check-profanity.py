@@ -30,9 +30,14 @@ def censorProfanity(str):
 
     #regex that identifies curse words
     regex = re.compile(r"fuck|shit|ass|dick|piss|cunt|damn|bastard|bitch|hell", re.IGNORECASE)
-    #for each curse word found in str, replace it with a censored version. Then
-    #return str with each curse word censored.
-    return regex.sub(censor, str)
+
+    if bool(regex.search(str)):
+        print("We think we've found profanity! Here's a censored version")
+        #for each curse word found in str, replace it with a censored version. Then
+        #return str with each curse word censored.
+        return regex.sub(censor, str)
+    else:
+        return "No profanity found here!"
 
 text = readText("C:/version-control/learning-python/mini-projects/profanity-checker/movie_quotes.txt")
 censoredText = censorProfanity(text)
