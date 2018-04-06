@@ -7,7 +7,7 @@ def print_all_movie_attributes(object):
     "\ntrailer url: " + object.trailer_youtube_url +
     "\nposter image url: " + object.poster_image_url +
     "\nvalid ratings: ")
-    print(object.valid_ratings)
+    print(object.VALID_RATINGS)
 
 
 lady_bird = movies.Movie("Lady Bird",
