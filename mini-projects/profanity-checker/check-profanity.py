@@ -3,4 +3,4 @@ def readText(file):
     contents = quotes.read()
     print(contents)
 
-readText("C:/version-control/learning-python/profanity-checker/movie_quotes.txt")
+readText("C:/version-control/learning-python/mini-projects/profanity-checker/movie_quotes.txt")
