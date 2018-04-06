@@ -1,9 +1,10 @@
 import movies
+import fresh_tomatoes
 
 def print_all_movie_attributes(object):
     print("title: " + object.title +
-    "\nplot summary: " + object.plot_summary +
-    "\ntrailer url: " + object.trailer_url +
+    "\nplot summary: " + object.storyline +
+    "\ntrailer url: " + object.trailer_youtube_url +
     "\nposwer image url: " + object.poster_image_url)
 
 
@@ -42,3 +43,5 @@ movie_list = [toy_story, avatar, lady_bird, school_of_rock, coco, midnight_in_pa
 #for film in movie_list:
 #    print_all_movie_attributes(film)
 #    film.show_trailer()
+
+fresh_tomatoes.open_movies_page(movie_list)
