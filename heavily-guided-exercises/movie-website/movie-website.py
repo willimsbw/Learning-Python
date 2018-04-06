@@ -2,6 +2,9 @@ import movies
 import fresh_tomatoes
 
 def print_all_movie_attributes(object):
+    """
+    When passed a Movie() object, prints all of its attributes
+    """
     print("title: " + object.title +
     "\nplot summary: " + object.storyline +
     "\ntrailer url: " + object.trailer_youtube_url +

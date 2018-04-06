@@ -1,6 +1,13 @@
 import webbrowser
 
 class Movie():
+    """
+    This class lets you construct Movie objects containing the movie's:
+    title
+    trailer url
+    poster url
+    storyline summary
+    """
 
     VALID_RATINGS = ["G", "PG", "PG-13", "R"]
 
