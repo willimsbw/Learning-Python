@@ -22,9 +22,10 @@ lady_bird = movies.Movie("Lady Bird",
                         "https://www.youtube.com/watch?v=cNi_HC839Wo",
                         "https://cdn.tuftsdaily.com/2017/11/MV5BMjg1NDY0NDYzMV5BMl5BanBnXkFtZTgwNzIwMTEwNDI@._V1_SY1000_CR006761000_AL_-938x535.jpg")
 
+
+print_all_movie_attributes(toy_story)
+print_all_movie_attributes(avatar)
 print_all_movie_attributes(lady_bird)
 lady_bird.show_trailer()
-#print_all_movie_attributes(toy_story)
-#print_all_movie_attributes(avatar)
-#toy_story.show_trailer()
-#avatar.show_trailer()
+toy_story.show_trailer()
+avatar.show_trailer()
