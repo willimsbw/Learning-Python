@@ -17,7 +17,15 @@ avatar = movies.Movie("Avatar",
                     "https://www.youtube.com/watch?v=5PSNL1qE6VY",
                     "https://www.movieposter.com/posters/archive/main/98/MPW-49246")
 
-print_all_movie_attributes(toy_story)
-print_all_movie_attributes(avatar)
-toy_story.show_trailer()
-avatar.show_trailer()
+lady_bird = movies.Movie("Lady Bird",
+                        "A teenager (Saoirse Ronan) navigates a loving but turbulent relationship with her strong-willed mother (Laurie Metcalf) over the course of an eventful and poignant senior year of high school.",
+                        "https://www.youtube.com/watch?v=cNi_HC839Wo",
+                        "https://cdn.tuftsdaily.com/2017/11/MV5BMjg1NDY0NDYzMV5BMl5BanBnXkFtZTgwNzIwMTEwNDI@._V1_SY1000_CR006761000_AL_-938x535.jpg")
+
+#print_all_movie_attributes(toy_story)
+#print_all_movie_attributes(avatar)
+#toy_story.show_trailer()
+#avatar.show_trailer()
+
+print_all_movie_attributes(lady_bird)
+lady_bird.show_trailer()
