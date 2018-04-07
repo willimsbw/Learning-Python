@@ -5,7 +5,7 @@ class Video():
     This class lets you construct Video objects containing the video's:
 
     title: string
-    duration: float
+    duration: int
     """
 
     def __init__(self, video_title, video_duration):
@@ -20,7 +20,7 @@ class Movie(Video):
     trailer url: string
     poster url: string
     storyline summary: string
-    duration: float
+    duration: int
     """
 
     VALID_RATINGS = ["G", "PG", "PG-13", "R"]
@@ -43,7 +43,7 @@ class TvShow(Video):
     season: int
     episode: int
     tv_station: string
-    duration: float
+    duration: int
     """
 
     def __init__(self, show_title, episode_season, episode_number, show_station, episode_duration):
